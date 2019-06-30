@@ -1,0 +1,65 @@
+ .profile-image {
+     text-align: center;
+     border-right: 2px dashed #EEEEEE;
+     margin-bottom: 5px;
+ }
+ 
+ .profile-image img {
+     margin-top: 12%;
+     width: 60px;
+     height: 60px;
+     max-width: 100%;
+     -webkit-border-radius: 50%;
+     border-radius: 50%;
+     -webkit-transition: -webkit-box-shadow 0.3s ease;
+     transition: box-shadow 0.3s ease;
+     -webkit-box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.06);
+     box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.06);
+ }
+ 
+ .profile-image .badge {
+     color: black;
+ }
+ 
+ .card {
+     padding: 0px;
+ }
+ 
+ .badge-silver {
+     background-color: #eaebec;
+     border-color: #dddee0;
+ }
+ 
+ .profile-details h5 {
+     font-size: 12px;
+ }
+ 
+ .top-tags {
+     margin-left: 2%;
+ }
+ 
+ .badge-gold {
+     background-color: #f9e596;
+     border-color: #ece5c6;
+ }
+ 
+ .badge-bronze {
+     background-color: #cd7f32;
+     border-color: #f0decb;
+ }
+ 
+ .badge {
+     padding: 10px;
+ }
+ 
+ .badge .fa {
+     padding-right: 6px;
+ }
+ 
+ .badge span {
+     padding-top: 3px;
+ }
+ 
+ .top-tags .badge {
+     padding: 5px;
+ }

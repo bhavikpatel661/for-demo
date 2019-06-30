@@ -1,0 +1,33 @@
+<div class="container-fluid row">
+    <div class="card col-lg-4 col-md-4 row profile" *ngIf="userData != undefined">
+        <div class="profile-image col-lg-5 col-md-5">
+            <img src="{{userData.data.profile_image}}" class="avatar-user">
+            <h5>{{userData.data.reputation}} Reputation</h5>
+            <div class="badge badge-gold label"><i class="fa fa-trophy"></i> {{userData.data.badge_counts.gold}}</div>
+            <div class="badge badge-silver label"><i class="fa fa-trophy"></i> {{userData.data.badge_counts.silver}}
+            </div>
+            <div class="badge badge-bronze label"><i class="fa fa-trophy"></i> {{userData.data.badge_counts.bronze}}
+            </div>
+        </div>
+        <div class="profile-details col-lg-7 col-md-7">
+            <h5><i class="fa fa-user"></i>&nbsp; {{userData.data.display_name}}</h5>
+            <h5><i class="fa fa-map-marker"></i>&nbsp; {{userData.data.location}}</h5>
+            <h5><i class="fa fa-globe"></i>&nbsp; {{userData.data.website_url}}</h5>
+
+        </div>
+
+    </div>
+
+    <div class="card col-lg-8 col-md-8 top-tags" *ngIf="userData != undefined">
+        <div class="card-header">Top Tags</div>
+        <div class="card-block">
+            <div class="card-text">
+
+                <label class="label label-info" *ngFor="let tag of userData.tags;  ">{{tag.name}} <span
+                        class="badge badge-info">{{tag.count}}</span></label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-main [userId]="userId"></app-main>

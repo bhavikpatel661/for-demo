@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <div style="text-align:center">
+        <h1>TOP QUESTIONS
+
+        </h1>
+    </div>
+
+    <div class="questions-wrapper">
+        <div class="card" *ngFor="let item of items; ">
+            <div class="card-block ">
+                <div class="col-lg-8 col-md-8 card-title">
+                    <h5>
+                        <a href="{{item.link}}">{{item.title}}</a>
+                    </h5>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="votes pull-right">
+                        <div class="count badge badge-info">{{item.score}}</div>
+                        <span>Votes</span>
+                    </div>
+                    <div class="answers pull-right">
+                        <div class="count badge badge-info">{{item.answer_count}}</div>
+                        <span>Answers</span>
+                    </div>
+                    <div class="views pull-right">
+                        <div class="count badge badge-info">{{item.view_count}}</div>
+                        <span>Views</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-footer">
+                <div class="tags col-lg-8 col-md-8">
+                    <label *ngFor="let tag of item.tags" class="label label-info">{{tag}}</label>
+                </div>
+                <div class="other col-lg-4 col-md-4">
+                    <p>asked {{item.last_activity_date | dateAgo}} : <a [routerLink]="['/user', item.owner.user_id]">{{item.owner.display_name}} </a>( {{item.owner.reputation}} )
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
